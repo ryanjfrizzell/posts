@@ -8,6 +8,7 @@ setuptools.setup(
     version=main_ns['__version__'],
     author="Ryan J Frizzell",
     author_email="ryan@frizzell.io",
+    scripts = [ "pcli" ],
     description="Blog Poster utility",
     long_description=long_description,
     long_description_content_type="text/markdown",
