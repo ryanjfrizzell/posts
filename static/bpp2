@@ -1,0 +1,38 @@
+### Buddy, Python and Posts part 2
+
+In [part 1](https://frizzell.io/bpp1/) I briefly discussed my extremely loose requirements for this project. The idea here is to do some exploring while re-learning a few things. 
+
+I chose to use [Buddy](https://buddy.works) almost entirely because I wanted to play with a CI/CD tool I haven't used before. In various previous professional roles, I gained at least some experience using tools like CodeShip, BuildKite, Travis, CircleCI, and plenty of Jenkins. 
+
+Enough about CI solutions for now. Typically when I start a project, I like to get directory structures figured out. So we'll start very simply by installing python3, virtual env, and a few other goodies. From there we'll slowly begin to put a fully functioning project together. 
+
+For this project, I decided to use [Python 3.6.5](https://www.python.org/downloads/release/python-365/). I downloaded the installer, executed it and hopped onto my command line. I located Python3 by typing `which python3` then used that binary to install pip with: 
+* `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`
+* `python3 get-pip.py`
+at this point, we've got pip installed. 
+
+Our next most important topic is making our code somewhat portable. There are many tools out there that can help this process, and indeed, we'll be using Docker to make our code as portable as possible in the future. For now, we're just trying to get anything to run so we'll install [virtualenv](https://virtualenv.pypa.io/en/stable/) to give us jumping off point and a clean place to execute our code while we experiment. 
+* `pip install virtualenv`
+
+Ok, we've got a Python3 installed, we've got pip installed, and we've got virtualenv installed. Time to create our virtualenv and layout our directory tree. 
+* `virtualenv -p python3 posts`
+
+This command creates a directory with a virtualenv for me to use for this project. In that directory I execute
+* ```source bin/activate``` to enter our virtualenv
+* ```source bin/activate``` activates our virtualenv
+* ``` python --version ``` just to verify we've got the expected version
+* if at any point we need to leave our virtualenv we type```deactivate```
+
+Finally, we make our directory tree to hold our wheel. The best way to get started is to check out the excellent QuickStart guide over at [*The Hitchhikers Guide to Packaging*](http://the-hitchhikers-guide-to-packaging.readthedocs.io/en/latest/quickstart.html). To sum it all up, create a directory named the same thing as your current directory, throw in an __init__.py, and you're good to go. 
+
+```$ pwd
+/Users/ryan.frizzell/git_repos/posts
+$ tree posts
+posts
+├── __init__.py
+└── version.py
+
+0 directories, 2 files
+```
+
+After this, we're pretty good to start coding up our command line utility. 

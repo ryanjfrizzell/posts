@@ -1,0 +1,10 @@
+### Buddy, Python, and Posts part 1
+
+Nope, not buzzword bingo. A long time ago the only language I would consider doing anything useful with was Python. Fast forward nearly a decade since I drew that "line" in the sand and I've adopted Ruby for almost all of my day-to-day needs. So, what's this series of posts about, well it's part me re-learning Python, part me sharing some docker and part me learning (or relearning) myself some Python. 
+
+The goal of this series of posts is to create a system which allows me (or indeed anyone) to automatically upload new posts to this blog (which is hosted by [Ghost](https://ghost.org/). 
+
+My requirements for this project will look something like 
+1. It must (mostly) be written in Python
+2. It must take a pull request from GitHub and use [Buddy](https://https://buddy.works/) upload new posts to Ghost. 
+3. It should probably use Docker, so the rest of this series stays somewhat relevant to hipster lifestyle 
